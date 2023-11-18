@@ -27,6 +27,7 @@
   const meals = computed(() => store.state.searchedMeals);
   
   function searchMeals() {
+    console.log(keyword.value)
     if (keyword.value) {
       store.dispatch("searchMeals", keyword.value);
     } else {

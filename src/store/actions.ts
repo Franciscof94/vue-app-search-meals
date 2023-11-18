@@ -8,7 +8,7 @@ export const searchMeals = (
   axiosClient
     .get(`search.php?s=${keyword}`)
     .then(({ data }) => {
-      commit("setSearchMeals", data.meals);
+      commit("setSearchedMeals", data.meals);
     })
     .catch((error) => {
       console.error("Error en la búsqueda de comidas:", error);
